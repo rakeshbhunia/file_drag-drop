@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<!--<div mwlDraggable (dragEnd)="dragEnd($event)">Drag me!</div>
+     <div
+      mwlDroppable
+      (drop)="this.droppedData = $event.dropData">
+      <span [hidden]="droppedData">Drop here</span>
+      <span [hidden]="!droppedData">Item dropped here with data: "{{ droppedData }}"!</span>
+    </div> -->
+<ngx-dropzone (filesAdded)="onFilesAdded($event)"
+              (filesRejected)="onFilesRejected($event)" [showPreviews]="true" #dropzone>
+             
+</ngx-dropzone>
+              <button (click)="dropzone.reset()">Reset</button>
+              <button (click)="dropzone.showFileSelector()">Show file selector</button>
+<!-- 
+<ngx-dropzone label="This is my custom dropzone"
+              class="custom-dropzone"
+              (filesAdded)="onFilesAdded($event)">
+</ngx-dropzone>
+<ngx-dropzone class="custom-dropzone" [showPreviews]="true"></ngx-dropzone> -->
